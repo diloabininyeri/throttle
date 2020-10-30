@@ -1,0 +1,21 @@
+{
+    "name": "zeus/throttle",
+    "description": "php  throttler  library package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dılo sürücü",
+            "email": "berxudar@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "predis/predis": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Throttle\\": "src/"
+        }
+    }
+}
