@@ -32,7 +32,8 @@ if ($throttle->isHasAccessLimit()) {
 #### if you want to configure a redis client
 
 ```php
-
+use Throttle\Throttle;
+use Throttle\Time;
 use Throttle\Redis;
 
 
