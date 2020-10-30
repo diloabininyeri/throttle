@@ -10,7 +10,7 @@ Powerful redis handles HTTP requests, you can easily integrate it into all api o
 use Throttle\Throttle;
 use Throttle\Time;
 
-require_once 'vendor/autoload.php';
+
 
 $throttle = new Throttle(
     new Time(60, 25)
