@@ -55,6 +55,6 @@ if ($throttle->isHasAccessLimit()) {
 Get detail 
 
 ```php
-echo '<pre>';
-$throttle->getDetail()->toArray());
+
+$throttle->getDetail()->toArray();
 ```
