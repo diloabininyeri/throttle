@@ -3,7 +3,6 @@
 
 namespace Throttle;
 
-use Predis\Client;
 
 /**
  * Class Throttle
@@ -26,14 +25,20 @@ class Throttle
      * @var bool
      */
     private bool $hasAccessLimit = true;
+    /**
+     * @var string|null
+     */
+    private ?string $specificKey;
 
     /**
      * Throttle constructor.
      * @param Time $time
+     * @param string|null $specificKey
      */
-    public function __construct(Time $time)
+    public function __construct(Time $time,?string $specificKey=null)
     {
-        $this->redisKey = Generate::redisKey($this->time = $time);
+        $this->redisKey = Generate::redisKey($this->time = $time,$specificKey);
+        $this->specificKey = $specificKey;
     }
 
     /**
@@ -83,5 +88,13 @@ class Throttle
     public function setHasAccessLimit(bool $hasAccessLimit): void
     {
         $this->hasAccessLimit = $hasAccessLimit;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getSpecificKey(): ?string
+    {
+        return $this->specificKey;
     }
 }
