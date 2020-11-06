@@ -53,7 +53,20 @@ class Time
     {
         $this->second = $second;
     }
-
+    /**
+     * @param int $hour
+     */
+    public function setHour(int $hour):void
+    {
+        $this->second += 60 *60* $hour;
+    }
+    /**
+     * @param int $minute
+     */
+    public function setMinute(int $minute):void
+    {
+        $this->second+=$minute*60;
+    }
     /**
      * @return int
      */

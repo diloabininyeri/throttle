@@ -3,7 +3,6 @@
 
 namespace Throttle;
 
-
 /**
  * Class Throttle
  * @package Throttle
@@ -35,9 +34,9 @@ class Throttle
      * @param Time $time
      * @param string|null $specificKey
      */
-    public function __construct(Time $time,?string $specificKey=null)
+    public function __construct(Time $time, ?string $specificKey=null)
     {
-        $this->redisKey = Generate::redisKey($this->time = $time,$specificKey);
+        $this->redisKey = Generate::redisKey($this->time = $time, $specificKey);
         $this->specificKey = $specificKey;
     }
 
