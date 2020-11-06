@@ -96,4 +96,12 @@ class Throttle
     {
         return $this->specificKey;
     }
+
+    /**
+     * @param string|null $specificKey
+     */
+    public function setSpecificKey(?string $specificKey): void
+    {
+        $this->specificKey = $specificKey;
+    }
 }
