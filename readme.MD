@@ -1,7 +1,7 @@
 #### PHP rate limit library with redis  
 install with composer
 ```console
-composer require zeus/throttle:dev-master
+composer require zeus/throttle
 ```
 Sets http request limitations, such as only 100 accesses in 10 minutes
 Powerful redis handles HTTP requests, you can easily integrate it into all api or projects
